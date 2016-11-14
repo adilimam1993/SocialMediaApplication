@@ -1,0 +1,208 @@
+
+body
+{
+// background-color: #ffe989;
+    color:black;
+}
+
+#container
+{
+	height:7%;
+	background-color:#eaeaea;
+}
+
+#login-form
+{
+    
+    font-family: 'Roboto', sans-serif;
+    float:right;
+    padding-top:10px;
+    
+
+}
+
+#login-form label
+{    
+    padding: 10px;
+}
+
+
+
+#login-form input[type="text"], input[type="password"]
+{
+    
+    padding:10px;
+    height: 20px;
+}
+#login-form input[type="submit"]
+{
+    margin-left: 20px;
+    width:80px;
+    background-color:#505050;
+    color:white;
+}
+
+
+span
+{
+    font-size: 40px;
+    font-weight: bold;
+    color:#505050;
+    
+   font-family: 'Rationale', sans-serif;
+   text-transform:uppercase;
+    color:#008b00;
+}
+
+img
+{
+	
+}
+
+.wrapper
+{
+    display:inline-block;
+     background: linear-gradient(white, silver);
+}
+
+#new-user-form
+{
+    width:18%;
+    float:left;
+     font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+   
+}
+
+#new-user-form input
+{
+    margin-bottom:20px;
+    height:30px;
+    width:200px;
+   
+}
+h3
+{
+    margin-left:60px;
+    margin-top:30px;
+}
+
+#new-user-form input[type="radio"]
+{
+    height:20px;
+    width:40px;
+   
+}
+
+#new-user-form input[type="submit"]
+{
+    height:40px;
+    width:200px;
+background-color:#505050;
+    color:white;
+}
+
+
+
+#new-user-form select
+{
+        margin-bottom:20px;
+        height:30px;
+        width:200px;
+
+    
+   
+}
+.radio label
+{
+    padding-top:-10px;
+}
+
+#ajax
+{
+    color:darkgreen;
+    font-weight: 500;
+    margin-top:-5px;
+    font-size: 14px;
+
+  
+}
+
+#profile
+{
+    background-color: #edecec;
+    height:620px;
+    width:20%;
+      background: linear-gradient(white, silver);
+}
+
+#profile-img
+{
+    margin-top: 30px;
+    margin-left:30px;
+    height:60%;
+    width:200px;
+   //border: 1px solid black;
+  
+    background-size: 200px 140px;
+  //  border-radius:10px;
+}
+
+#user-img
+{
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+#pic
+{
+	
+	width:200px;
+    height:30px;
+    background-color:#505050;
+    color:white;
+    margin-top:20px;
+    margin-left:0px;
+}
+
+
+h2
+{
+     font-family: 'Rationale', sans-serif;
+    margin-left: 35px;
+    font-size:28px;   
+     
+}
+.Update-Image
+{
+
+	//background-color: #ffffff;
+    height:120px;
+    margin-top:40px;
+}
+
+h3
+{
+     font-family: 'Rationale', sans-serif;
+    margin-left:0px;
+    font-size:20px;   
+}
+
+.stat
+{
+     font-family: 'Rationale', sans-serif;
+    font-size:22px;   
+    color: green;
+}
+
+.logout
+{
+	margin-top:120px;
+	
+}
+.logout input
+{
+	height:30px;
+	width:200px;
+    margin-left: 30px;
+}

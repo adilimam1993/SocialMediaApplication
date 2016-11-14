@@ -1,0 +1,168 @@
+<html>
+    
+    <head>
+      
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
+        <link  rel="stylesheet" type="text/css" href="mediaStyle.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Rationale" rel="stylesheet">        
+        <link rel="stylesheet" type="text/css" href="ionicons.min.css">    
+        
+    </head>
+    
+    
+    <body>
+   <div id="container">    
+         <span>Bloggers World</span>  
+        
+    <form action="http://localhost:8080/SocialMediaApplication/LoginProcess.jsp" method="post" id="login-form">
+       
+       
+      
+       <label> Username </label>
+       <input type="text" name="username" placeholder="Username">
+       
+       <label> Password </label>
+       <input type="password" name="key" placeholder="Password">
+        
+        <input type="submit" value="Log in" name="submit">
+        
+        
+    </form>    
+    </div> 
+    
+    <div class="wrapper">
+ 
+       
+ <form id="new-user-form" method="post" action="NewUser.jsp">
+        
+       <h3>New User?</h3>
+       
+     
+       <input type="text" name="firstname" placeholder="First Name"><br>
+       <input type="text" name="lastname" placeholder="Last Name"><br>
+       
+       <div id="ajax"></div> 
+       <input id="useremail" type="text" name="email" placeholder="Email" onchange="validateEmail()"><br>
+      
+       
+       <input type="password" name="key1" placeholder="Password"> <br>      
+
+        
+       <input type="password" name="confirm-key1" placeholder="Confirm Password"><br>
+       
+          <select>
+            
+            <option value="Computer Science" name="field">Computer Science</option>
+            <option value="Mathematics" name="field">Mathematics</option>
+            <option value="Physics" name="field">Physics</option>
+            <option value="Geography" name="field">Geography</option>
+            <option value="Pharmacy" name="field">Pharmacy</option>
+            
+            
+        </select><br>
+        
+          <div class="radio">    
+                 <input type="radio" name="gender" value="male" checked><label>Male</label> 
+                 <input type="radio" name="gender" value="female"><label>Female</label> 
+          </div>
+        
+                
+
+                
+
+
+        
+        
+        <input id="createAccount" type="submit" value="Create Account" name="submit">
+       
+       
+    
+      
+		
+        
+                
+    </form>
+    
+    
+    <script>
+        
+         document.getElementById("createAccount").addEventListener("click",function()
+                                                                   {
+             alert("New User Created");
+         },"false");   
+     
+    
+        function ajaxRequest()
+        {
+            
+var http=new XMLHttpRequest();
+             
+             http.onreadystatechange = function()
+             {
+               if(this.readyState==4 && this.status==200) 
+                   {
+                       
+                       if(this.responseText=="Email Already Exists")
+                           {
+                               document.getElementById("ajax").style.color="red";
+                               document.getElementById("ajax").innerHTML="&#10006;&nbsp;&nbsp;"+this.responseText;
+                           }
+                       else
+                       {
+                       	 document.getElementById("ajax").style.color="darkgreen";
+                           document.getElementById("ajax").innerHTML="&#10004;&nbsp;&nbsp;"+this.responseText;
+                           
+                       } 
+                  
+               
+                   }
+
+             };
+
+           
+            
+          http.open("GET","HandleAjaxRequest?email="+document.getElementById("useremail").value+"",true);
+          http.send();
+          
+          
+      
+          
+        }
+        
+        
+        function validateEmail()
+        {
+          
+            var email=document.getElementById("useremail").value.toString();
+        
+            var atpos = email.indexOf("@"); 
+            var dotpos = email.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+    {   
+           document.getElementById("ajax").style.color="red";
+           document.getElementById("ajax").innerHTML="&#10006;&nbsp;&nbsp;Incorrect Email Address";
+    }       
+    else
+    {
+    	ajaxRequest();
+    }
+           
+    }
+        
+    </script>
+     
+     
+     
+     
+    
+    <img src="bird.jpg" alt="sharing" width="80%" height="90%">   
+        
+</div>
+           
+    </body>
+    
+    
+    
+    
+    
+</html>
